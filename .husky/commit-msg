@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo Checking commit message against semantic release...
+npx --no-install commitlint --esit "$1"
+echo Commit message valid, procedding.

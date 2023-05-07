@@ -1,0 +1,95 @@
+{
+  "name": "fmovies",
+  "description": "fmovies frontend portal",
+  "author": "Ravi Ranjan raviranjan.rr1994@gmail.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prestart": "npm install",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "test:coverage": "",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare-commit-hooks": "npm install --global commitzen@4.2.4 cz-conventional-changelog@3.3.0 @commitlint/config-conventional@16.2.1 @commitlint/cli@16.2.3",
+    "prepare:dev": "is-ci || (husky install && npm run prepare-commit-hooks)",
+    "prepare": "node -e \"\"process.exit(process.env.NODE_ENV === 'production' ? 0 : 1) || npm run prepare:dev"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)"
+    ]
+  },
+  "config": {
+    "commitzen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "types": {
+        "feat": {
+          "description": "A new feature (minor)",
+          "title": "Fatures"
+        },
+        "fix": {
+          "description": "A bug fix (patch)",
+          "title": "Bugs"
+        },
+        "perf": {
+          "description": "A change which improves performance (patch)",
+          "title": "Performance"
+        },
+        "chore": {
+          "description": "A CI change (no-release)",
+          "title": "CI"
+        },
+        "docs": {
+          "description": "A documentation change (no-release)",
+          "title": "Documentation"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "web-vitals": "^3.3.1"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.6.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
+    "prettier": "^2.8.8",
+    "react-scripts": "^5.0.1",
+    "typescript": "^5.0.4"
+  }
+}
