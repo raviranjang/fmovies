@@ -13,7 +13,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
-    "prepare-commit-hooks": "npm install --global commitzen@4.2.4 cz-conventional-changelog@3.3.0 @commitlint/config-conventional@16.2.1 @commitlint/cli@16.2.3"
+    "prepare-commit-hooks": "husky install"
   },
   "eslintConfig": {
     "extends": [
