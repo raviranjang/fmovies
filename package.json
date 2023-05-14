@@ -1,0 +1,109 @@
+{
+  "name": "fmovies",
+  "description": "fmovies frontend portal",
+  "author": "Ravi Ranjan raviranjan.rr1994@gmail.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prestart": "npm install",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "test:coverage": "",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare-commit-hooks": "husky install",
+    "prepare-commit-msg": "exec < CON && git cz --hook || true",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "types": {
+        "feat": {
+          "description": "A new feature (minor)",
+          "title": "Features"
+        },
+        "fix": {
+          "description": "A bug fix (patch)",
+          "title": "Bugs"
+        },
+        "docs": {
+          "description": "Documentation only changes",
+          "title": "Documentation"
+        },
+        "style": {
+          "description": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
+          "title": "Styles"
+        },
+        "refactor": {
+          "description": "A code change that neither fixes a bug nor adds a feature",
+          "title": "Refactoring"
+        },
+        "test": {
+          "description": "Adding missing tests or correcting existing tests",
+          "title": "Tests"
+        },
+        "chore": {
+          "description": "Changes to the build process or auxiliary tools and libraries such as documentation generation",
+          "title": "Chores"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "web-vitals": "^3.3.1"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.6.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
+    "react-scripts": "^5.0.1",
+    "typescript": "4.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
